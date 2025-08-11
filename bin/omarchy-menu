@@ -39,15 +39,15 @@ open_web() {
 }
 
 install() {
-  present_terminal "echo 'Installing $1...'; yay -Sy --noconfirm $2"
+  present_terminal "echo 'Installing $1...'; paru -Sy --noconfirm $2"
 }
 
 install_and_launch() {
-  present_terminal "echo 'Installing $1...'; yay -Sy --noconfirm $2 && gtk-launch $3"
+  present_terminal "echo 'Installing $1...'; paru -Sy --noconfirm $2 && gtk-launch $3"
 }
 
 install_font() {
-  present_terminal "echo 'Installing $1...'; yay -Sy --noconfirm --needed $2 && sleep 2 && ~/.local/share/omarchy/bin/omarchy-font-set '$3'"
+  present_terminal "echo 'Installing $1...'; paru -Sy --noconfirm --needed $2 && sleep 2 && ~/.local/share/omarchy/bin/omarchy-font-set '$3'"
 }
 
 show_learn_menu() {
@@ -171,15 +171,13 @@ show_setup_config_menu() {
 }
 
 show_install_menu() {
-  case $(menu "Install" "󰣇  Package\n  Web App\n  Style\n  Editor\n󱚤  AI\n  Dropbox\n  Steam\n  Docker DB") in
+  case $(menu "Install" "󰣇  Package\n  Web App\n  Style\n  Editor\n󱚤  AI\n  Steam") in
   *Package*) terminal $OMARCHY_BIN_PATH/omarchy-pkg-install ;;
   *Web*) present_terminal $OMARCHY_BIN_PATH/omarchy-webapp-install ;;
   *Style*) show_install_style_menu ;;
   *Editor*) show_install_editor_menu ;;
   *AI*) show_install_ai_menu ;;
-  *Dropbox*) present_terminal $OMARCHY_BIN_PATH/omarchy-install-dropbox ;;
   *Steam*) present_terminal $OMARCHY_BIN_PATH/omarchy-install-steam ;;
-  *Docker*) present_terminal $OMARCHY_BIN_PATH/omarchy-install-docker-dbs ;;
   *) show_main_menu ;;
   esac
 }

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-yay -S --noconfirm --needed \
+paru -S --noconfirm --needed \
   wget curl unzip inetutils impala \
-  fd eza fzf ripgrep zoxide bat jq xmlstarlet \
+  fd eza lsd fzf ripgrep zoxide bat jq xmlstarlet \
   wl-clipboard fastfetch btop \
-  man tldr less whois plocate bash-completion \
-  alacritty
+  man teeldeer less whois plocate bash-completion \
+  alacritty fish
