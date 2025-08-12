@@ -2,10 +2,7 @@
 
 if [ -z "$OMARCHY_BARE" ]; then
   paru -S --noconfirm --needed \
-    gnome-calculator gnome-keyring ncspot
-
-  paru -S --noconfirm --needed bitwarden ||
-    echo -e "\e[31mFailed to install bitwarden. Continuing without!\e[0m"
+    gnome-calculator gnome-keyring bitwarden ncspot
 fi
 
 # Copy over Omarchy applications

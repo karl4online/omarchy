@@ -5,8 +5,3 @@ if ! paru -Q ttf-jetbrains-mono-nerd &>/dev/null; then
   fc-cache
 fi
 
-if ! paru -Q ttf-ia-writer &>/dev/null; then
-  paru -S --noconfirm ttf-ia-writer
-  rm -rf ~/.local/share/fonts/iAWriterMonoS*
-  fc-cache
-fi

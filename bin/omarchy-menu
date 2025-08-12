@@ -239,7 +239,6 @@ show_update_menu() {
   *Config*) show_update_config_menu ;;
   *Process*) show_update_process_menu ;;
   *Themes*) present_terminal $OMARCHY_BIN_PATH/omarchy-theme-update ;;
-  *Timezone*) $OMARCHY_BIN_PATH/omarchy-cmd-tzupdate ;;
   *) show_main_menu ;;
   esac
 }

@@ -36,10 +36,8 @@ show_subtext "Let's install Omarchy! [1/5]"
 source $OMARCHY_INSTALL/config/identification.sh
 source $OMARCHY_INSTALL/config/config.sh
 source $OMARCHY_INSTALL/config/detect-keyboard-layout.sh
-source $OMARCHY_INSTALL/config/fix-fkeys.sh
 source $OMARCHY_INSTALL/config/network.sh
 source $OMARCHY_INSTALL/config/power.sh
-source $OMARCHY_INSTALL/config/timezones.sh
 source $OMARCHY_INSTALL/config/login.sh
 source $OMARCHY_INSTALL/config/nvidia.sh
 
@@ -60,7 +58,7 @@ source $OMARCHY_INSTALL/desktop/hyprlandia.sh
 source $OMARCHY_INSTALL/desktop/theme.sh
 source $OMARCHY_INSTALL/desktop/bluetooth.sh
 source $OMARCHY_INSTALL/desktop/fonts.sh
-source $OMARCHY_INSTALL/desktop/printer.sh
+# source $OMARCHY_INSTALL/desktop/printer.sh
 
 # Apps
 show_logo expand
